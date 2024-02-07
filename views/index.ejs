@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/images/cherry-icon.ico" type="image/x-icon">
+    <title>Cherry Blog</title>
+</head>
+<body class="postsBody">
+    <%- include('./partials/nav-bar.ejs') %>
+    <main class="postContainer"></main>
+    <% for( let i = 0; i <= postCount; i++ ) { %>
+        
+            <%- include(`./posts/post${i}.ejs`) %>
+        
+    <% } %>
+</main>
+    
+</body>
+</html>

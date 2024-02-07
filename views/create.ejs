@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="shortcut icon" href="/images/cherry-icon.ico" type="image/x-icon">
+    <title>Cherry Blog</title>
+</head>
+<body>
+    <%- include('./partials/nav-bar.ejs') %>
+    <main class="formContainer">
+
+        <form class="postCreationForm" action="/createpost" method="post">
+            <input class="postCreationForm-item postCreationForm-authorName" type="text" name="authorName" placeholder="Author name" required>
+            <input class="postCreationForm-item postCreationForm-postTitle" type="text" name="postTitle" placeholder="Post title" required>
+            <textarea class="postCreationForm-item postCreationForm-textArea" placeholder="Write your text here"  name="postText" id="" cols="30" rows="6" required></textarea>
+            <input class="postCreationForm-submit" type="submit" value="Create post">
+        </form>
+
+    </main>
+</body>
+</html>
